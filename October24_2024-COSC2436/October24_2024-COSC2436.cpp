@@ -121,23 +121,33 @@ int main()
 	printTheTwoQueues(firstLane, secondLane);
 
 
-	while (firstLane.empty() == false && secondLane.empty() == false)
+	while (firstLane.empty() == false || secondLane.empty() == false)
 	{
 		//scan items and dequeue (pop) customers 
 		
-		firstLane.front().numberOfItems--; 
-		secondLane.front().numberOfItems--;
-
-		if (firstLane.front().numberOfItems == 0)
+		/*I added this check for empty on both queues after lecture */
+		if (firstLane.empty() == false)
 		{
-			cout << firstLane.front().name << " has finished scanning his/her items\n";
-			firstLane.pop(); 
+			firstLane.front().numberOfItems--;
+
+			if (firstLane.front().numberOfItems == 0)
+			{
+				cout << firstLane.front().name << " has finished scanning his/her items\n";
+				firstLane.pop();
+			}
 		}
 
-		if (secondLane.front().numberOfItems == 0)
+		if (secondLane.empty() == false)
 		{
-			cout << firstLane.front().name << " has finished scanning his/her items\n";
-			secondLane.pop(); 
+			secondLane.front().numberOfItems--;
+
+			if (secondLane.front().numberOfItems == 0)
+			{
+				/*(a bug was) HERE!!****************************************/
+				cout << secondLane.front().name << " has finished scanning his/her items\n";
+				/*HERE!!****************************************/
+				secondLane.pop();
+			}
 		}
 
 		std::this_thread::sleep_for(std::chrono::seconds{ 3 });
