@@ -98,6 +98,8 @@ int main()
 	queue<Customer>firstLane; 
 	queue<Customer>secondLane;
 
+	//firstLane.p
+
 	int totalNumberOfCustomers = allOfTheCustomersInStore.size(); 
 
 	for (int i = 0; i < totalNumberOfCustomers / 2; ++i)

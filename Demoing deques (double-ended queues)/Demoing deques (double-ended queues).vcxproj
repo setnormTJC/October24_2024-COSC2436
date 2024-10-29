@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{918ec45d-f5b1-45b7-8cca-d4d489ed60ee}</ProjectGuid>
-    <RootNamespace>October242024COSC2436</RootNamespace>
+    <ProjectGuid>{026e6bdf-c856-46eb-b922-0af6085e9664}</ProjectGuid>
+    <RootNamespace>Demoingdequesdoubleendedqueues</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -127,7 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Demoing queues - grocery store simulator.cpp" />
+    <ClCompile Include="Demoing deques (double-ended queues).cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
